@@ -1520,7 +1520,8 @@ function(a, b) {
                 }
             }
         }
-    }), g.extend({
+    }),
+        /* g.extend({
         getMongo: function(a) {
             a = void 0 === a ? this.getRules() : a;
             var b = this;
@@ -1582,7 +1583,7 @@ function(a, b) {
         setRulesFromMongo: function(a) {
             this.setRules(this.getRulesFromMongo(a))
         }
-    }), h.rule_and_group_containers = h.rule_container + ", " + h.group_container, g.define("sortable", function(a) {
+    }), */ h.rule_and_group_containers = h.rule_container + ", " + h.group_container, g.define("sortable", function(a) {
         this.on("afterInit", function(a) {
             $.event.props.push("dataTransfer");
             var c, d, f = a.builder;
@@ -1624,7 +1625,7 @@ function(a, b) {
     }, {
         default_no_sortable: !1,
         icon: "glyphicon glyphicon-sort"
-    }), g.defaults({
+    }),/* g.defaults({
         sqlOperators: {
             equal: {
                 op: "= ?"
@@ -1942,7 +1943,7 @@ function(a, b) {
         setRulesFromSQL: function(a, b) {
             this.setRules(this.getRulesFromSQL(a, b))
         }
-    }), g.define("unique-filter", function() {
+    }), */ g.define("unique-filter", function() {
         this.status.used_filters = {}, this.on("afterUpdateRuleFilter", this.updateDisabledFilters), this.on("afterDeleteRule", this.updateDisabledFilters), this.on("afterCreateRuleFilters", this.applyDisabledFilters), this.on("afterReset", this.clearDisabledFilters), this.on("afterClear", this.clearDisabledFilters)
     }), g.extend({
         updateDisabledFilters: function(a) {
